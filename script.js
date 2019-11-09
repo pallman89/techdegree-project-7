@@ -31,7 +31,7 @@ let hourData = {
         borderWidth: 1,}],
 };
 
-let dailyData = {
+let dayData = {
     labels:  ["1", "5", "9", "13", "17", "21", "25",
     "29", "31"],
     datasets: [{data: [50, 150, 400, 859, 1500, 800, 1250, 1850, 1000, 1500,
@@ -59,7 +59,7 @@ let monthData = {
 };
 
 let trafficOptions = {
-    responsive: true;
+    responsive: true,
     aspectRatio: 2.5,
     animation: {
     duration: 0
@@ -78,7 +78,39 @@ let trafficOptions = {
 
     let trafficChart = new Chart(trafficCanvas, {
         type: 'line',
-        data: dailyData,
+        data: dayData,
         options: trafficOptions
         });
 
+// Bar Graph
+
+const dailyCanvas = document.getElementById('daily-chart');
+
+const dailyData = {
+    labels: ["S", "M", "T", "W", "T", "F", "S" ],
+    data: [{
+        label: '# of Hits',
+        data: [75, 102, 115, 225, 200, 90, 104], 
+        backgroundColor: '#7477BF',
+        borderWidth: 1
+    }]
+}
+
+const dailyOptions = {
+    scales: {
+        yAxes: [{
+            ticks: {
+             beginAtZero:true
+             }
+         }]
+    },
+    legend : {
+        display: false
+    }
+    }
+
+    let dailyChart = new Chart(dailyCanvas, {
+        type: 'bar',
+        data: dailyData,
+        options: dailyOptions
+    });
