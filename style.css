@@ -1,10 +1,28 @@
+* {
+     box-sizing: border-box;
+   }
+   
+   body {
+     margin: 0 auto;
+   }
+   
+ 
+ img {
+     height: 50px;
+     width: 50px;
+ }
 
+ 
+ 
  .profile-pic, .bell {
     height: 50px;
     width: 50px;
+  
 }
 
-
+.nav-bar img {
+   padding: 10px;
+}
 
 
 
@@ -24,12 +42,20 @@
 
 header {
     grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 nav {
     grid-area: nav;
     background-color: blue;
+    display: flex;
+    justify-content: center;
 }
+
+
 
 main {
     grid-area: main;
