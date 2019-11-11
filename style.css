@@ -1,3 +1,5 @@
+/* doc style */
+
 * {
      box-sizing: border-box;
    }
@@ -7,26 +9,74 @@
    }
    
  
+/* Setting size and rounded look on images and sizes */
+ .members img, .recent img {
+     height: 50px;
+     width: 50px;
+     border-radius: 50%;
+ }
+
  img {
      height: 50px;
      width: 50px;
+
  }
 
  
  
- .profile-pic, .bell {
-    height: 50px;
-    width: 50px;
-  
+.bell {
+    height: 30px;
+    width: 30px; 
 }
+
+
+/* setting up header to be styled */
+/* ------Also to make this work correctly had to set the display of the header to "flex".
+See the header in the setting up the grid section too. */
+h1 {
+    margin-right: auto;
+}
+
+.bell {
+    border-right: 2px black solid;
+    padding-right: 10px;
+}
+.profile-pic {
+    padding: 0 10px 0 10px ;
+    border-radius: 50%;
+    
+}
+
+/* nav bar - see media query for other adjustments for the Nav Bar */
 
 .nav-bar img {
-   padding: 10px;
+    padding: 10px;
+    height: 30px;
+    width: 30px;
+
+ }
+
+ /* Dashboard and search bar styling */
+ .main-header {
+     display: flex;
+     justify-content: space-between
+ }
+
+
+ /* Traffic styling */
+ .traffic-header {
+     display: flex;
+     justify-content: flex-end;
+     flex-wrap: nowrap;
+ }
+
+.traffic-heading {
+    padding-right: auto;
 }
-
-
-
-
+ 
+ .traffic-nav li {
+    display: inline-block;
+    }
 
 
 /* setting up the grid */
@@ -43,7 +93,7 @@
 header {
     grid-area: header;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
 }
@@ -78,6 +128,10 @@ main {
     .main {
         grid-template-columns: 50%;
     }
+   .main-header {
+       grid-column-start: 1;
+       grid-column-end: 3;
+   }
 
     .traffic , .social-container {
         grid-column: 1 / span 2;
@@ -96,6 +150,13 @@ main {
     }
     .widget-container-half {
         width: 45vw;
+    }
+
+    .nav-bar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
     }
 }
 
