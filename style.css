@@ -71,12 +71,34 @@ h1 {
  }
 
 .traffic-heading {
-    padding-right: auto;
+    margin-right: auto;
 }
  
  .traffic-nav li {
     display: inline-block;
     }
+
+/*Alert Styling  */
+
+.alert {
+   background-color: aqua;
+   margin-left: 15px;
+   margin-right: 15px;
+   border-radius: 15px;
+  
+   
+
+}
+.alert p {
+    display: inline-block;
+}
+.alert-banner-close {
+    float: right;
+    padding-right: 5px;
+}
+
+
+
 
 
 /* setting up the grid */
@@ -114,6 +136,28 @@ main {
 
 .widget-container-full, .widget-container-half {
     width: 95vw;
+}
+
+
+
+
+/* social circles */
+
+.facebook-circle, .google-circle, .twitter-circle {
+    display: flex;
+    justify-content: space-evenly;
+    height: 60px;
+    width:  60px; 
+    border-radius: 50%;
+    background-color: blue;
+    
+}
+
+.twitter-svg {
+    padding-top: 15px;
+}
+.google-svg {
+    padding-top: 15px;
 }
 
 /* media query */
@@ -157,6 +201,10 @@ main {
         flex-direction: column;
         justify-content: flex-start;
 
+    }
+    .alert {
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
 }
 
