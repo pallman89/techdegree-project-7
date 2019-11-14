@@ -1,7 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow:400,700&display=swap');
+
 /* doc style */
 
 * {
      box-sizing: border-box;
+    font-family: 'Archivo Narrow', sans-serif;
    }
    
    body {
@@ -10,6 +14,7 @@
 
    h3, h2 {
        margin-left: 15px;
+       color: gray;
    }
    
  
@@ -23,6 +28,7 @@
  img {
      height: 50px;
      width: 50px;
+     padding-right: 5px;
 
  }
 
@@ -30,7 +36,9 @@
  
 .bell {
     height: 30px;
-    width: 30px; 
+    width: 50px;
+    border-right: 1px solid black;
+    padding-right: 10px;
 }
 
 
@@ -39,16 +47,18 @@
 See the header in the setting up the grid section too. */
 h1 {
     margin-right: auto;
+    color: white;
+    padding-left: 10px;
 }
 
-.bell {
-    border-right: 2px black solid;
-    padding-right: 10px;
-}
+
 .profile-pic {
     padding: 0 10px 0 10px ;
     border-radius: 50%;
     
+}
+header p{
+    padding-right: 10px;
 }
 
 /* nav bar - see media query for other adjustments for the Nav Bar */
@@ -63,8 +73,29 @@ h1 {
  /* Dashboard and search bar styling */
  .main-header {
      display: flex;
-     justify-content: space-between
+     justify-content: space-between;
+     
+
  }
+
+ .main-header input{
+     width: 400px;
+     border-radius: 5px;
+     border: solid lightgray 1px;
+     padding: 10px 0 10px 5px;
+     margin-top: 20px;
+     margin-right: 15px;
+     
+
+ }
+
+ .search-bar {
+     background-color:  rgb(247, 247, 247);
+     border: 1px solid lightgray;
+     border-radius: 5px;
+     padding-left: 500px;
+ }
+ 
 
 
  /* Traffic styling */
@@ -80,10 +111,15 @@ h1 {
  
  .traffic-nav li {
     display: inline-block;
+    color: gray;
+    padding-left: 40px;
     }
  .traffic {
-     border-bottom: 1px solid black;
+     border-bottom: 1px solid lightgray;
  }   
+ .traffic-nav {
+     margin-right: 15px;
+ }
 
 #traffic-chart {
 padding-left: 25px;
@@ -97,13 +133,17 @@ padding-bottom: 15px;
    background-color:#7477BF;
    margin-left: 15px;
    margin-right: 15px;
-   border-radius: 15px;
+   border-radius: 5px;
+   color: white;
+   margin-top: 20px;
   
    
 
 }
 .alert p {
     display: inline-block;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 .alert-banner-close {
     float: right;
@@ -132,12 +172,14 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color:#7477BF;
+    color: white;
 
 }
 
 nav {
     grid-area: nav;
-    background-color:rgb(55, 58, 145);
+    background-color:rgb(69, 72, 158);
     display: flex;
     justify-content: center;
 }
@@ -160,14 +202,14 @@ main {
 
 .facebook-circle, .google-circle, .twitter-circle {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 60px;
     width:  60px; 
     border-radius: 50%;
     background-color: #7477BF;
     padding:10px 10px; 
     margin: 10px ;
-    margin-right: 40px;
+    margin-right: ;
 
     
 }
@@ -187,46 +229,52 @@ main {
 }
 .number {
     font-size: 64px;
-    margin-top: auto;
+    margin-top: 0;
     margin-bottom: auto;
+    color: gray;
    
 }
 .social-name {
     margin-bottom: auto;
     font-size: 18px;
+    color: #7477BF;
 }
 
 .twitter-block, .facebook-block, .google-block {
     display: flex;
-    border: black solid 1px;
+    border: lightgray solid 1px;
     border-radius: 5px;
-    align-items: flex-end;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: space-between;
     width: 80%;
     margin: 15px auto;
+    background-color: rgb(247, 247, 247);
+    padding:0 15px;
     
     
 }
 
+
 /* daily traffic */
 .daily {
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
     padding-bottom: 15px;
 }
 
 /* mobile users */
 .mobile {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
     padding-bottom: 15px;
 }
 
 /* New Members */
 
 .members {
-    border-top: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    color:gray;
     
 }
 .members-container, .recent-container {
@@ -254,11 +302,17 @@ main {
     justify-content: flex-start;
 }
 
+a {
+    color: #7477BF;
+    text-decoration: none;
+}
+
 /* recent */
 
 .recent {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    color: gray;
 }
 
 .recent-1, .recent-2, .recent-3, .recent-4 {
@@ -278,13 +332,13 @@ main {
 /* styling the underlines in recent and members */
 
 .member-1, .member-2, .member-3, .recent-1, .recent-2, .recent-3 {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid lightgray;
 }
 
 
 /* message user */
 .message {
-    border-right: 1px solid black;
+    border-right: 1px solid lightgray;
 }
 
 .message-form {
@@ -300,6 +354,7 @@ main {
     margin-top: 10px;
     border-radius: 5px;
     background-color: #7477BF;
+    color: white;
 }
 
 .form-area {
@@ -309,20 +364,51 @@ main {
     padding-left: 5px;
 }
 
-.form-field {
+#userField {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 5px;
 }
 
 .form-area, .form-field {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     border-radius: 5px;
 }
 
 
 
 /* Settings Area */
+.settings-container {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 35px;
+    color: gray;
+}
+
+
+
+.settings-button {
+    display: flex;
+    justify-content: space-between ;
+        
+}
+
+#cancel, #save {
+    width: 48%;
+}
+#cancel {
+    border-radius: 5px;
+    padding: 10px 0;
+    height: 35px;
+    margin-top: 10px;
+    background-color: gray;
+    color: white;
+}
+#timezone {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 
@@ -379,11 +465,12 @@ main {
     }
     .twitter-block, .facebook-block, .google-block {     
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-evenly;
         flex-basis: 25%;
         margin-right: 0;
         margin-left: 0; 
+        padding-right: 30px;
     }
 }
 
