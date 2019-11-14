@@ -476,6 +476,16 @@ a {
 
 
 
- 
+ @media (max-width: 767px) {
+     .message {
+        border-bottom: 1px solid lightgray;
+        border-right: none;
+        padding-bottom: 10px;
+     }
+
+     .members {
+         border-right: none;
+     }
+ }
 
 
