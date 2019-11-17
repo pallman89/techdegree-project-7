@@ -157,7 +157,7 @@ const dailyOptions = {
     const send = document.getElementById('send');
 
     send.addEventListener('click', (e) => {
-        if (user.value && message.value === " "){
+        if (user.value && message.value === ""){
             alert("Please fill out user and message fields before sending");
         } else if (user.value === ""){
             alert("Please fill out message field before sending");
